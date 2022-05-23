@@ -17,7 +17,7 @@ def get_pages_count():
     '''Method makes a request to the site to find the number of pages.'''
 
     headers = {
-        "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Mobile Safari/537.36",
+        "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Mobile Safari/537.36",  # noqa: E501
         "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
     }
 
@@ -36,8 +36,10 @@ def get_pages_count():
 
 
 async def get_page_data(session, page, pages_count):
+    '''Asynchronous function which collect data from the submitted page.'''
+
     headers = {
-        "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Mobile Safari/537.36",
+        "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Mobile Safari/537.36",  # noqa: E501
         "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
     }
 
@@ -104,6 +106,7 @@ async def get_page_data(session, page, pages_count):
 
 
 async def gather_data(pages_count):
+    '''Asynchronous function which creates tasks-functions.'''
     connector = aiohttp.TCPConnector(verify_ssl=False, limit=10)
 
     async with aiohttp.ClientSession(connector=connector) as session:
