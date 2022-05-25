@@ -1,2 +1,7 @@
 *.json
 *.lock
+*.txt
+*.ini
+
+/data
+/__pycache__

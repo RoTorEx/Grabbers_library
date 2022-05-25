@@ -1,1 +1,1 @@
-# Lamoda async parser
+# Custom library parser
