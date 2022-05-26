@@ -1,19 +1,12 @@
+from values import input_initial_values
 from base import Grabber
 
 
 def main():
-    keys = ('url', 'pages', )
+    '''Main function.'''
+    initial_values = input_initial_values()
 
-    input_data = map(lambda x: None if x == '' else x, (
-        "https://www.lamoda.by/c/4152/default-men/",
-        # input('Enter URL site: '),
-        input('Enter count of pages or skip to grab all: ')
-    ))
-
-    initial_values = dict(zip(keys, input_data))
-
-    site = Grabber(initial_values)
-    site.start()
+    Grabber(initial_values).start()
 
 
 if __name__ == "__main__":
