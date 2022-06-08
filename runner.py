@@ -26,6 +26,7 @@ class ParserRunner:
         self.pages = int(input("Enter count of pages which you like to parse: "))
 
         if self.site_name in parsers_list:
+            # self.site_parser = eval(f"{self.site_name.capitalize()}Parser()")
             self.site_parser = self.PARSERS[self.site_name]
 
             # self.run(self.site_parser)  # Creating an instance of a class
