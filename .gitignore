@@ -3,5 +3,8 @@
 *.txt
 *.ini
 
+**/__pycache__
+
+/Archive
 /data
-/__pycache__
+
